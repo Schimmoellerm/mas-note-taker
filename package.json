@@ -1,0 +1,23 @@
+{
+  "name": "mas-note-taker",
+  "version": "1.0.0",
+  "description": "Note Taking App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schimmoellerm/mas-note-taker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schimmoellerm/mas-note-taker/issues"
+  },
+  "homepage": "https://github.com/Schimmoellerm/mas-note-taker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
