@@ -18,9 +18,12 @@ app.get('/api/notes', (req, res) => res.json(DB));
 app.post('/api/notes', (req, res) => {
     const newNote = req.body;
     console.log(newNote);
-
-//create unique ids for newNote (property called id)
-
+    
+    newNote.id = 1
+    
+    for (let i = 0; i < DB.length; i++) {
+        newNote.id = i+1;
+    }
 
     DB.push(newNote);
     console.log(DB)
