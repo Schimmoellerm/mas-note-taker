@@ -22,11 +22,13 @@ app.post('/api/notes', (req, res) => {
     const newNote = req.body;
     console.log(newNote);
     
-    for (let i = 0; i < DB.length; i++) {
-        newNote.id = index;
-        console.log()
-        index++;
-    }
+    newNote.id = index;
+    index++;
+
+    //for (let i = 0; i < DB.length; i++) {
+        //console.log()
+        //index++;
+    //}
 
     DB.push(newNote);
     console.log(DB)
