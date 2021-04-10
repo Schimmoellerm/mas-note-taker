@@ -4,6 +4,9 @@ const DB = require('./db/db.json')
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3000;
+//const { v4: uuidv4 } = require('uuid')
+
+let index = 1
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -19,10 +22,10 @@ app.post('/api/notes', (req, res) => {
     const newNote = req.body;
     console.log(newNote);
     
-    newNote.id = 1
-    
     for (let i = 0; i < DB.length; i++) {
-        newNote.id = i+1;
+        newNote.id = index;
+        console.log()
+        index++;
     }
 
     DB.push(newNote);
